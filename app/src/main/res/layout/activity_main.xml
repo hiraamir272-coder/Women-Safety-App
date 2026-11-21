@@ -33,7 +33,7 @@
         android:layout_marginBottom="30dp" />
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/nameBox"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:hint="Enter Your Name"
@@ -42,7 +42,7 @@
         android:layout_marginBottom="15dp" />
 
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/passwordBox"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:hint="Password"
@@ -51,14 +51,14 @@
         android:padding="15dp"
         android:layout_marginBottom="25dp" />
     <CheckBox
-        android:id="@+id/cbRememberMe"
+        android:id="@+id/rememberBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Remember Me"
         android:textColor="#666666"
         android:layout_marginBottom="10dp" />
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/loginButton"
         android:layout_width="344dp"
         android:layout_height="48dp"
         android:backgroundTint="#E91E63"
@@ -77,6 +77,7 @@
         android:elevation="8dp"
         android:layout_marginTop="15dp" />
     <TextView
+        android:id="@+id/messageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dont have an account? Sign Up"
