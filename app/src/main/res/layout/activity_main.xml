@@ -1,90 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="30dp"
-    android:background="#FFF5F7"
     android:gravity="center"
-    tools:ignore="ExtraText">
+    android:padding="30dp"
+    android:background="#FFF5F5">
 
+
+    <!-- MOTI WORDING -->
     <ImageView
-        android:layout_width="133dp"
-        android:layout_height="129dp"
-        android:layout_gravity="center"
-        android:src="@drawable/logo" />
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:src="@drawable/logo2" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Women Safety App"
-        android:textSize="16sp"
+        android:textSize="38sp"
         android:textStyle="bold"
-        android:textColor="#C2185B"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center" />
+        android:textColor="#D81B60"
+        android:gravity="center"
+        android:layout_marginTop="24dp" />
 
+    <!-- DECENT LINE -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="you are safe here"
-        android:textSize="28sp"
-        android:textColor="#666666"
-        android:layout_gravity="center"
-        android:layout_marginBottom="30dp" />
-
-    <EditText
-        android:id="@+id/nameBox"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:hint="Enter Your Name"
-        android:background="#FFFFFF"
-        android:padding="15dp"
-        android:layout_marginBottom="15dp" />
-
-    <EditText
-        android:id="@+id/passwordBox"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:background="#FFFFFF"
-        android:padding="15dp"
-        android:layout_marginBottom="25dp" />
-    <CheckBox
-        android:id="@+id/rememberBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Remember Me"
-        android:textColor="#666666"
-        android:layout_marginBottom="10dp" />
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="344dp"
-        android:layout_height="48dp"
-        android:backgroundTint="#E91E63"
-        android:text="LOGIN"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:elevation="18dp"
-        android:translationZ="4dp"/>
-    <Button
-        android:id="@+id/btnSOS"
-        android:layout_width="344dp"
-        android:layout_height="45dp"
-        android:text="🚨 SOS - Emergency Help"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#FF0000"
-        android:elevation="8dp"
-        android:layout_marginTop="15dp" />
-    <TextView
-        android:id="@+id/messageText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dont have an account? Sign Up"
-        android:textColor="#C2185B"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp" />
+        android:text="Feel Safe Stay Strong."
+        android:textSize="26sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_marginTop="14dp" />
 
 </LinearLayout>
