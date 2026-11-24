@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDEEF2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- 1. App Logo -->
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            android:contentDescription="App logo" />
+
+        <!-- 2. Women Safety App - Welcome ki jagah -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Women Safety App"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#E91E63"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login to continue"
+            android:textSize="14sp"
+            android:textColor="#888888"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 3. Email / Phone Number -->
+        <EditText
+            android:id="@+id/etEmailPhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Email / Phone Number"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:background="#FFFFFF" />
+
+        <!-- 4. Password -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:layout_marginTop="14dp"
+            android:background="#FFFFFF" />
+
+        <!-- 6. Forgot Password -->
+        <TextView
+            android:id="@+id/tvForgetPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textAlignment="textEnd"
+            android:textColor="#C2185B"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <!-- 7. Remember Me -->
+        <CheckBox
+            android:id="@+id/cbRememberMe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remember Me"
+            android:textColor="#555555"
+            android:layout_marginTop="10dp" />
+
+        <!-- 8. Login Button - Dark Pink -->
+
+        <!-- 9. Sign Up -->
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="165dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="#C2185B"
+            android:text="LOGIN"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? Sign Up"
+            android:textColor="#555555"
+            android:layout_marginTop="16dp" />
+
+        <!-- 10. Emergency Button SOS - Last pe -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginTop="26dp"
+            android:backgroundTint="#C2185B"
+            android:text="Emergency SOS"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>
