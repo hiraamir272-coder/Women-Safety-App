@@ -9,6 +9,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.text.InputType;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SecondActivity extends AppCompatActivity {
@@ -77,15 +78,14 @@ public class SecondActivity extends AppCompatActivity {
         builder.setTitle("Forget Password");
 
         // 1st Line - Register Email
-        EditText etRegisterEmail = new EditText(this);
-        etRegisterEmail.setHint("Register Email");
-        etRegisterEmail.setPadding(40, 30, 40, 30);
-        builder.setView(etRegisterEmail);
+         EditText input = new EditText(this);
+        input.setHint("Enter new Password");
+        builder.setView(input);
 
         // 2nd Line - Send Reset link Button
-        builder.setPositiveButton("Send Reset link", (dialog, which) -> {
-            String regEmail = etRegisterEmail.getText().toString().trim();
-            if (regEmail.equals(myEmail)) {
+        builder.setPositiveButton("Confirm", (dialog, which) -> {
+            String newPass = input.getText().toString().trim();
+            if (newPass.equals("728572")) {
                 Toast.makeText(this, Html.fromHtml("<b>Login Successful</b>"), Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show();
