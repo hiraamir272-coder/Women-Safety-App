@@ -1,6 +1,6 @@
 package com.example.womensafetyapp;
 
-import android.content.Intent;
+import android.app.AlertDialog;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Html;
@@ -9,22 +9,18 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SecondActivity extends AppCompatActivity {
 
     EditText etEmailPhone, etPassword;
-    Button btnLogin;
     CheckBox cbRememberMe;
+    Button btnLogin;
     TextView tvForgetPassword;
 
-    // Tumhara Fixed Data
     String myEmail = "hiraamir272@gmail.com";
     String myPhone = "03234101385";
-    String myPassword = "001199";
-
-    SharedPreferences prefs;
+    String myPass = "001199";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,16 +29,16 @@ public class SecondActivity extends AppCompatActivity {
 
         etEmailPhone = findViewById(R.id.etEmailPhone);
         etPassword = findViewById(R.id.etPassword);
-        btnLogin = findViewById(R.id.btnlogin);
         cbRememberMe = findViewById(R.id.cbRememberMe);
+        btnLogin= findViewById(R.id.btnlogin);
         tvForgetPassword = findViewById(R.id.tvForgetPassword);
 
-        prefs = getSharedPreferences("LoginPrefs", MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("LoginPrefs", MODE_PRIVATE);
 
-        // Agar pehle Remember Me tick tha to auto fill
+        // Agar Remember Me pehle tick tha to data wapis bhar do
         if (prefs.getBoolean("remember", false)) {
             etEmailPhone.setText(prefs.getString("email", ""));
-            etPassword.setText(prefs.getString("pass", ""));
+            etPassword.setText(prefs.getString("password", ""));
             cbRememberMe.setChecked(true);
         }
 
@@ -51,25 +47,24 @@ public class SecondActivity extends AppCompatActivity {
             String input = etEmailPhone.getText().toString().trim();
             String pass = etPassword.getText().toString().trim();
 
-            if (input.isEmpty() || pass.isEmpty()) {
-                Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
-            } else if ((input.equals(myEmail) || input.equals(myPhone)) && pass.equals(myPassword)) {
+            if ((input.equals(myEmail) || input.equals(myPhone)) && pass.equals(myPass)) {
 
-                // Remember Me Save
+                // Remember Me save karo
+                SharedPreferences.Editor editor = prefs.edit();
                 if (cbRememberMe.isChecked()) {
-                    prefs.edit().putBoolean("remember", true)
-                            .putString("email", input)
-                            .putString("pass", pass).apply();
+                    editor.putString("email", input);
+                    editor.putString("password", pass);
+                    editor.putBoolean("remember", true);
                 } else {
-                    prefs.edit().clear().apply();
+                    editor.clear();
                 }
+                editor.apply();
 
                 // BOLD me Login Successful
                 Toast.makeText(this, Html.fromHtml("<b>Login Successful</b>"), Toast.LENGTH_SHORT).show();
 
-
             } else {
-                Toast.makeText(this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -81,22 +76,25 @@ public class SecondActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Forget Password");
 
-        // Custom Layout Dialog ke liye
-        final EditText etRegisterEmail = new EditText(this);
+        // 1st Line - Register Email
+        EditText etRegisterEmail = new EditText(this);
         etRegisterEmail.setHint("Register Email");
         etRegisterEmail.setPadding(40, 30, 40, 30);
         builder.setView(etRegisterEmail);
 
-        builder.setPositiveButton("Send Reset Link", (dialog, which) -> {
+        // 2nd Line - Send Reset link Button
+        builder.setPositiveButton("Send Reset link", (dialog, which) -> {
             String regEmail = etRegisterEmail.getText().toString().trim();
             if (regEmail.equals(myEmail)) {
-                Toast.makeText(this, Html.fromHtml("<b>Login Successful</b>"), Toast.LENGTH_LONG).show();
+                Toast.makeText(this, Html.fromHtml("<b>Login Successful</b>"), Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Email Not Registered", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show();
             }
         });
 
+        // 3rd Line - Cancel Button
         builder.setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
+
         builder.show();
     }
 }
