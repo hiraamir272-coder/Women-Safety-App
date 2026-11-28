@@ -3,6 +3,7 @@ package com.example.womensafetyapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +16,12 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import android.app.AlertDialog;
 import android.view.View;
-
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.view.View;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
 public class HomeActivity extends AppCompatActivity {
 
     // Saare cards ko yahan declare karenge
@@ -25,15 +31,31 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+            TextView btnBack = findViewById(R.id.btnBack);
+            btnBack.setOnClickListener(v -> {
+                Intent intent = new Intent(HomeActivity.this, SecondActivity.class);
+                startActivity(intent);
+                finish();
+            });
         // 1. XML wali ID ko Java se jorna - YE SAB SE ZAROORI HAI
-        cardLiveLocation = findViewById(R.id.cardLiveLocation);
+
         cardSafePlace = findViewById(R.id.cardSafePlace);
         cardSafePlace.setOnClickListener(v -> {
             Intent intent = new Intent(HomeActivity.this, SafePlaceAtivity.class);
             startActivity(intent);
         });
-        cardFakeCall = findViewById(R.id.cardFakeCalls);
+        LinearLayout cardFakeCalls = findViewById(R.id.cardFakeCalls);
+        LinearLayout fakeCallLayout = findViewById(R.id.fakeCallLayout);
+        Button acceptCallBtn = findViewById(R.id.acceptCallBtn);
+        Button declineCallBtn = findViewById(R.id.declineCallBtn);
+
+        cardFakeCalls.setOnClickListener(v -> {
+            fakeCallLayout.setVisibility(View.VISIBLE);
+        });
+
+        declineCallBtn.setOnClickListener(v -> {
+            fakeCallLayout.setVisibility(View.GONE);
+        });
         cardTrustedContact=findViewById(R.id.cardTrustedContact);
         cardTrustedContact.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +66,7 @@ public class HomeActivity extends AppCompatActivity {
 
         // 2. LIVE LOCATION ka click - Ye Map wali screen kholega
         // 2. LIVE LOCATION ka click - Ye Dialog Box kholega
+        cardLiveLocation=findViewById(R.id.cardLiveLocation);
         cardLiveLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,11 +98,10 @@ public class HomeActivity extends AppCompatActivity {
                 double longitude = location.getLongitude();
                 showLocationDialog(latitude, longitude);
             } else {
-                Toast.makeText(this, "Location nahi mili, GPS On karo", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Location shared Successfully!", Toast.LENGTH_SHORT).show();
             }
         });
     }
-
     private void showLocationDialog(double latitude, double longitude) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Your Live Location");
@@ -87,7 +109,7 @@ public class HomeActivity extends AppCompatActivity {
 
         // 1. SHARE LOCATION wala button
         builder.setPositiveButton("Share Location", (dialog, which) -> {
-            Toast.makeText(this, "Location Shared", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Location Shared", Toast.LENGTH_LONG).show();
             // Toast 2 second ka hi hota hai, ye khud band ho jayega
         });
 

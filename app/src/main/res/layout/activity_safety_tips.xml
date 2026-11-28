@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- Header -->
+
+        <
+
+        <!-- Safety Tips -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Safety Tips"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="#B0005A"
+            android:gravity="center"
+            android:paddingTop="10dp"/>
+
+
+        <!-- Tips Row 1 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:text="📍 Plan Your Route&#10;Always plan your journey and prefer familiar routes."
+                android:textSize="16sp"
+                android:textColor="#B0005A"
+                android:gravity="center"
+                android:background="#FCE4F1"
+                android:padding="8dp"
+                android:layout_margin="4dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:text="👥 Stay Connected&#10;Keep a trusted person informed about your journey."
+                android:textSize="16sp"
+                android:textColor="#B0005A"
+                android:gravity="center"
+                android:background="#FCE4F1"
+                android:padding="8dp"
+                android:layout_margin="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Tips Row 2 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:text="👁 Be Aware of Your Surroundings&#10;Notice what is happening around you."
+                android:textSize="16sp"
+                android:textColor="#B0005A"
+                android:gravity="center"
+                android:background="#FCE4F1"
+                android:padding="8dp"
+                android:layout_margin="4dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:text="🛡 Trust Your Instincts&#10;If something feels wrong, seek help immediately."
+                android:textSize="16sp"
+                android:textColor="#B0005A"
+                android:gravity="center"
+                android:background="#FCE4F1"
+                android:padding="8dp"
+                android:layout_margin="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Tips Row 3 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:text="📱 Keep Your Phone Ready&#10;Keep your phone charged and emergency contacts accessible."
+                android:textSize="16sp"
+                android:textColor="#B0005A"
+                android:gravity="center"
+                android:background="#FCE4F1"
+                android:padding="8dp"
+                android:layout_margin="4dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:text="🔒 Protect Personal Information&#10;Avoid sharing personal details publicly."
+                android:textSize="16sp"
+                android:textColor="#B0005A"
+                android:gravity="center"
+                android:background="#FCE4F1"
+                android:padding="8dp"
+                android:layout_margin="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Emergency Heading -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📞 Emergency Numbers."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:background="#B0005A"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Emergency Row 1 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                android:text="🚔&#10;Police&#10;📞 15"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#B0005A"
+                android:gravity="center"
+                android:background="#FCE4F1"
+                android:layout_margin="4dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                android:text="🚑&#10;Rescue&#10;📞 1122"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#B0005A"
+                android:gravity="center"
+                android:background="#FCE4F1"
+                android:layout_margin="4dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                android:text="🚒&#10;Fire Brigade&#10;📞 16"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#B0005A"
+                android:background="#FCE4F1"
+                android:layout_margin="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Emergency Row 2 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="#FCE4F1"
+                android:gravity="center"
+                android:text="🛣️&#10;Motorway Police&#10;📞 130"
+                android:textColor="#B0005A"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:text="⚖️&#10;Human Rights&#10;📞 1099"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#B0005A"
+                android:gravity="center"
+                android:background="#FCE4F1"
+                android:layout_margin="4dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:text="♀&#10;Punjab Women&#10;📞 1043"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#B0005A"
+                android:gravity="center"
+                android:background="#FCE4F1"
+                android:layout_margin="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Reminder -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚠ Very Important Notice&#10;about Heart patients."
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFF00"
+            android:gravity="center"
+            android:background="#B0005A"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚠ Very Important Notice&#10;In case of an accident."
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFF00"
+            android:gravity="center"
+            android:background="#B0005A"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnBackHome"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Back to"
+                android:textSize="12sp"
+                android:textColor="#B0005A"
+                android:backgroundTint="#F8C8E0"
+                android:layout_margin="4dp"/>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Next  ➜"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#B0005A"
+                android:layout_margin="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

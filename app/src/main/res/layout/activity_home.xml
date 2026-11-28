@@ -15,11 +15,12 @@
         android:gravity="center_vertical">
 
         <TextView
+            android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="←"
             android:textSize="32sp"
-            android:textColor="#2196f3" />
+            android:textColor="#1565C0" />
 
         <TextView
             android:layout_width="0dp"
@@ -87,7 +88,7 @@
                         android:layout_height="wrap_content"
                         android:text="Your Safety is our priority."
                         android:textSize="25sp"
-                        android:textColor="#5C8ED6"
+                        android:textColor="#1565C0"
                         android:textStyle="bold"
                         android:layout_marginTop="12dp" />
                 </LinearLayout>
@@ -328,5 +329,42 @@
                 android:textSize="12sp" />
         </LinearLayout>
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/fakeCallLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#222222"
+        android:visibility="gone">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incoming Call"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mom"
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/acceptCallBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accept"
+            android:layout_marginTop="30dp"/>
+
+        <Button
+            android:id="@+id/declineCallBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decline"/>
+
+    </LinearLayout>
 </LinearLayout>
