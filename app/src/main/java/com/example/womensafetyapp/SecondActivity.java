@@ -9,6 +9,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 import android.text.InputType;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -63,7 +64,8 @@ public class SecondActivity extends AppCompatActivity {
 
                 // BOLD me Login Successful
                 Toast.makeText(this, Html.fromHtml("<b>Login Successful</b>"), Toast.LENGTH_SHORT).show();
-
+                 Intent intent = new Intent(SecondActivity.this, HomeActivity.class);
+                startActivity(intent);
             } else {
                 Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show();
             }
@@ -87,6 +89,7 @@ public class SecondActivity extends AppCompatActivity {
             String newPass = input.getText().toString().trim();
             if (newPass.equals("728572")) {
                 Toast.makeText(this, Html.fromHtml("<b>Login Successful</b>"), Toast.LENGTH_SHORT).show();
+
             } else {
                 Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show();
             }

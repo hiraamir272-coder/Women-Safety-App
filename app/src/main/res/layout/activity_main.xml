@@ -7,6 +7,7 @@
     android:padding="30dp"
     android:background="#FFF5F5">
     <!-- MOTI WORDING -->
+
     <ImageView
         android:layout_width="170dp"
         android:layout_height="170dp"
@@ -18,7 +19,7 @@
         android:text="Women Safety App"
         android:textSize="38sp"
         android:textStyle="bold"
-        android:textColor="#E91E63"
+        android:textColor="#C2185B"
         android:gravity="center"
         android:layout_marginTop="24dp" />
 
